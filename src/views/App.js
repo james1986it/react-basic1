@@ -1,7 +1,12 @@
 import logo from './logo.svg';
 import './App.scss';
+import MyComponent from './Example/MyComponent';
 
-function App() {
+// đây là funtion component cách khai báo truyền thống
+// function App() {
+// kiểu viết funtion component hiện tại gọi là arrow funtion
+const App = ()=> {
+  // cú pháp JSX
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +22,7 @@ function App() {
         >
           Learn React
         </a>
+        <MyComponent />
       </header>
     </div>
   );

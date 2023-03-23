@@ -1,0 +1,13 @@
+1. Why React
+2. Class vs Hook (function component). Redux vs Context API
+3. Setup env
+    3.1 project hello world với react
+    3.2 source code on github
+    3.3 tạo cấu trúc thư mục code react
+4. React component
+5. JSX
+    JSX: cho phép viết HTML bên trong file js và viết được js bên trong html
+    JSX: luôn trả về 1 khối bao bọc bên trong cặp thẻ div hoặc có thể dùng thẻ đặc biệt frapment hoặc cặp thẻ <> </>
+
+6. State
+    

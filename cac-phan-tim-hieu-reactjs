@@ -10,4 +10,4 @@
     JSX: luôn trả về 1 khối bao bọc bên trong cặp thẻ div hoặc có thể dùng thẻ đặc biệt frapment hoặc cặp thẻ <> </>
 
 6. State
-    
+    Là biến lưu trữ dữ liệu có thể bị thay đổi và dữ liệu thay đổi đó ngay lập tức được update lại trên giao diện

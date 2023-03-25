@@ -1,10 +1,18 @@
 import React from "react";
+import ChildComponent from "./ChildComponent";
 
 class MyForm extends React.Component {
   // Khai báo biến state
   state = {
     firstName: "",
     lastName: "",
+    arrJobs: [
+      { id: 1, title: "Title 1", salary: "500 $" },
+      { id: 2, title: "Title 2", salary: "300 $" },
+      { id: 3, title: "Title 3", salary: "200 $" },
+      { id: 4, title: "Title 4", salary: "900 $" },
+      { id: 5, title: "Title 5", salary: "700 $" },
+    ],
   };
 
   handleChangeFirstName = (event) => {
@@ -65,6 +73,22 @@ class MyForm extends React.Component {
             />
           </form>
         </div>
+
+        <ChildComponent
+          name={this.state.firstName}
+          number={1}
+          arrJobs={this.state.arrJobs}
+        />
+        <ChildComponent
+          name={"thuộc tính props 2"}
+          number={2}
+          arrJobs={this.state.arrJobs}
+        />
+        <ChildComponent
+          name={"thuộc tính props 3"}
+          number={3}
+          arrJobs={this.state.arrJobs}
+        />
       </>
     );
   }

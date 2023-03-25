@@ -19,4 +19,14 @@
             bien2: 'giá trị được thay đổi cho biến 2'
         })
 7. From trong react
-    
+    Form không cần trường action
+    Kiểm soát các giá trị input bằng các hàm onchange, onclick và biến state
+
+8. Quản hệ cha con trong react và truyền PropS truyền dữ liệu data từ cha xuống con
+    Tức là có component Cha và có các component Con
+    Khi truyền dữ liệu PropS thì chỉ truyền được dữ liệu từ thằng cha xuống thằng con và không có chiều ngược lại không truyền DL trực tiếp từ thằng con lên chả
+9. truyền dữ liệu list props từ cha xuống component con
+    Sẽ truyền array hoặc object Từ cha xuống con
+    Sử dụng hàm map để lặp và in dữ liệu của js
+
+

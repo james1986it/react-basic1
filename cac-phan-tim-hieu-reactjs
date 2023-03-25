@@ -10,4 +10,13 @@
     JSX: luôn trả về 1 khối bao bọc bên trong cặp thẻ div hoặc có thể dùng thẻ đặc biệt frapment hoặc cặp thẻ <> </>
 
 6. State
-    Là biến lưu trữ dữ liệu có thể bị thay đổi và dữ liệu thay đổi đó ngay lập tức được update lại trên giao diện
+    - Là biến lưu trữ dữ liệu có thể bị thay đổi và dữ liệu thay đổi đó ngay lập tức được update lại trên giao diện
+    - Biến state là 1 object
+    - Khai báo 1 state : state = {bien1: 'giá trị 1', bien2: 'giá trị 2', ...}
+    - Để set thay đổi biến state ta sử dụng hàm setState
+        this.setState({
+            bien1: 'giá trị được thay đổi cho biến 1',
+            bien2: 'giá trị được thay đổi cho biến 2'
+        })
+7. From trong react
+    

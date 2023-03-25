@@ -1,6 +1,18 @@
 import React from 'react';
 
 class MyComponent extends React.Component{
+    // Khai báo biến state
+    state = {
+        name: 'Lực nd',
+        company: 'Công ty cổ phần quảng cáo trực tuyến 24h'
+    }
+
+    onChangeName = (event) => {
+        this.setState({
+            name: event.target.value
+        })
+    }
+
     /**
      * 
      * @returns 
@@ -12,7 +24,14 @@ class MyComponent extends React.Component{
         let Name = 'Lực';
 
         return(
-            <div>Hello my component, My name is  { Name } </div>
+            <>
+                <div>
+                    <label>Nhập tên: </label> <input onChange={(event) => this.onChangeName(event)} />
+                    <p>
+                        <label>Tên của bạn là: {this.state.name}</label>
+                    </p>
+                </div>
+            </>
         )
     }
 }

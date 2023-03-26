@@ -1,6 +1,16 @@
 import React from "react";
 
 class ChildComponent extends React.Component {
+  state = {
+    showJobs: false,
+  };
+
+  onChangeShowHide = (event) => {
+    this.setState({
+      showJobs: !this.state.showJobs,
+    });
+  };
+
   /**
    *
    * @returns
@@ -13,6 +23,9 @@ class ChildComponent extends React.Component {
     console.log(">>> call render: ", this.state);
     // cú pháp lấy các biến nhanh từ dữ liệu object
     let { name, number, arrJobs } = this.props;
+
+    //  Lấy biến showJOb
+    let { showJobs } = this.state;
 
     // Hoặc có thể lấy như sau
     // left name = this.props.name;
@@ -30,13 +43,30 @@ class ChildComponent extends React.Component {
         </div>
         <div>
           <p>Job list</p>
-          {arrJobs.map((item, index) => {
-            return (
-              <div key={item.id + "." + number}>
-                {item.title} - {item.salary}
+          {showJobs === false && (
+            <div>
+              <button onClick={(event) => this.onChangeShowHide(event)}>
+                show content
+              </button>
+            </div>
+          )}
+          {/* Dùng điều kiện của react hoạc có thể dùng if else của js */}
+          {showJobs === true && (
+            <>
+              {arrJobs.map((item, index) => {
+                return (
+                  <div key={item.id + "." + number}>
+                    {item.title} - {item.salary}
+                  </div>
+                );
+              })}
+              <div>
+                <button onClick={(event) => this.onChangeShowHide(event)}>
+                  Hide content
+                </button>
               </div>
-            );
-          })}
+            </>
+          )}
         </div>
       </>
     );

@@ -1,5 +1,6 @@
 import React from "react";
 import ChildComponent from "./ChildComponent";
+// import FuntionComponent from "./FuntionComponent";
 
 class MyForm extends React.Component {
   // Khai báo biến state
@@ -7,11 +8,18 @@ class MyForm extends React.Component {
     firstName: "",
     lastName: "",
     arrJobs: [
-      { id: 1, title: "Title 1", salary: "500 $" },
-      { id: 2, title: "Title 2", salary: "300 $" },
-      { id: 3, title: "Title 3", salary: "200 $" },
-      { id: 4, title: "Title 4", salary: "900 $" },
-      { id: 5, title: "Title 5", salary: "700 $" },
+      { id: 1, title: "Title 1", salary: "500" },
+      { id: 2, title: "Title 2", salary: "300" },
+      { id: 3, title: "Title 3", salary: "200" },
+      { id: 4, title: "Title 4", salary: "900" },
+      { id: 5, title: "Title 5", salary: "700" },
+      { id: 6, title: "Title 6", salary: "100" },
+      { id: 7, title: "Title 7", salary: "1200" },
+      { id: 8, title: "Title 8", salary: "7200" },
+      { id: 9, title: "Title 9", salary: "4300" },
+      { id: 10, title: "Title 10", salary: "2300" },
+      { id: 11, title: "Title 11", salary: "4300" },
+      { id: 12, title: "Title 12", salary: "2100" },
     ],
   };
 
@@ -29,7 +37,7 @@ class MyForm extends React.Component {
 
   handleSubmit = (event) => {
     // Ngăn chặn hành động mặc định của nút submit form, nút submit form có type là submit
-    event.preventDetault();
+    // event.preventDetault();
 
     // log dữ liệu form
     console.log(">>> Dữ liệu form: ", this.state);
@@ -79,7 +87,7 @@ class MyForm extends React.Component {
           number={1}
           arrJobs={this.state.arrJobs}
         />
-        <ChildComponent
+        {/* <ChildComponent
           name={"thuộc tính props 2"}
           number={2}
           arrJobs={this.state.arrJobs}
@@ -88,7 +96,7 @@ class MyForm extends React.Component {
           name={"thuộc tính props 3"}
           number={3}
           arrJobs={this.state.arrJobs}
-        />
+        /> */}
       </>
     );
   }

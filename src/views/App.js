@@ -1,12 +1,12 @@
-import logo from './logo.svg';
-import './App.scss';
-import MyComponent from './Example/MyComponent';
-import MyForm from './Example/MyForm';
+import logo from "./logo.svg";
+import "./App.scss";
+import MyComponent from "./Example/MyComponent";
+import MyForm from "./Example/MyForm";
 
 // đây là funtion component cách khai báo truyền thống
 // function App() {
 // kiểu viết funtion component hiện tại gọi là arrow funtion
-const App = ()=> {
+const App = () => {
   // cú pháp JSX
   return (
     <div className="App">
@@ -17,6 +17,6 @@ const App = ()=> {
       </header>
     </div>
   );
-}
+};
 
 export default App;

@@ -29,4 +29,9 @@
     Sẽ truyền array hoặc object Từ cha xuống con
     Sử dụng hàm map để lặp và in dữ liệu của js
 
+10. StateFull và StateLess component (function Và Class)
+    StateFull component Tức là funtion component có state
+    StateLess component Tức là Class component không có state
+
+11. Conditional Output => ẩn hiện block khi nội dung quá dài
 

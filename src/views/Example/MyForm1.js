@@ -31,6 +31,35 @@ class MyForm1 extends React.Component {
     this.setState({
       arrJobs: [...this.state.arrJobs, job],
     });
+
+    // Hoặc có thể viết như sau
+    /*
+      // lấy state hiện tại
+      let currentJob = this.state.arrJobs;
+      // đẩy dữ liệu vào job hiện tại
+      currentJob.push(job);
+      // set lại giá trị state
+      this.setState({
+        arrJobs: currentJob,
+        // arrJobs: [...this.state.arrJobs, job],
+      });
+    */
+  };
+
+  // Hàm xoá job
+  removeJob = (jobItem, event) => {
+    console.log(">>> job cần xoá: ", jobItem);
+    console.log(">>> event: ", event);
+
+    // Lấy job hiện tại
+    let currentJob = this.state.arrJobs;
+    // Lấy ra tất cả các phần tư khác với phần tử cần xoá jobItem
+    currentJob = currentJob.filter((item) => item.id !== jobItem.id);
+
+    // Set lại giá trị jobs
+    this.setState({
+      arrJobs: currentJob,
+    });
   };
 
   /**
@@ -51,6 +80,7 @@ class MyForm1 extends React.Component {
           name={this.state.firstName}
           number={1}
           arrJobs={this.state.arrJobs}
+          removeJob={this.removeJob}
         />
       </>
     );

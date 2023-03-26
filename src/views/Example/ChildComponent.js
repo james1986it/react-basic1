@@ -56,7 +56,12 @@ class ChildComponent extends React.Component {
               {arrJobs.map((item, index) => {
                 return (
                   <div key={item.id + "." + number}>
-                    {item.title} - {item.salary}
+                    {item.title} - {item.salary}{" "}
+                    <button
+                      onClick={(event) => this.props.removeJob(item, event)}
+                    >
+                      Xoá
+                    </button>
                   </div>
                 );
               })}

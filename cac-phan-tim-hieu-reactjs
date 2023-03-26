@@ -42,5 +42,10 @@
         - có thể kế thừa và sử dụng lại các component
 13. Truyền Functions Từ Cha sang Con - Functions as props
     truyền Hàm từ chả xuống con để thay đổi state của component Cha
+14. Xóa Dữ Liệu - Deleting Data với React.JS
+    Dữ liệu truyền từ component Cha xuống component Con để hiển thị 
+    Viết 1 function Delete dữ liệu ở component Cha sau đó truyền hàm này xuống component Con và hàm này sẽ đc gọi ở component Con
+    => như vậy dữ liệu sẽ đc xoá
+
 
 

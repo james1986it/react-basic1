@@ -34,4 +34,13 @@
     StateLess component Tức là Class component không có state
 
 11. Conditional Output => ẩn hiện block khi nội dung quá dài
+    Dùng biến state Để quản lý, trong ví dụ của bài ở component ChildComponent
+
+12. Chia cắt component
+    Tại sao?
+        - để dễ quản lý code
+        - có thể kế thừa và sử dụng lại các component
+13. Truyền Functions Từ Cha sang Con - Functions as props
+    truyền Hàm từ chả xuống con để thay đổi state của component Cha
+
 

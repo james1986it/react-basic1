@@ -46,6 +46,8 @@
     Dữ liệu truyền từ component Cha xuống component Con để hiển thị 
     Viết 1 function Delete dữ liệu ở component Cha sau đó truyền hàm này xuống component Con và hàm này sẽ đc gọi ở component Con
     => như vậy dữ liệu sẽ đc xoá
+15. Virtual DOM
+    
 
 
 

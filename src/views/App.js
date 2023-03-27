@@ -1,8 +1,14 @@
 import logo from "./logo.svg";
 import "./App.scss";
-import MyComponent from "./Example/MyComponent";
-import MyForm from "./Example/MyForm";
-import MyForm1 from "./Example/MyForm1";
+
+// thư viện hiển thị thông báo notify
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+// import MyComponent from "./Example/MyComponent";
+// import MyForm from "./Example/MyForm";
+// import MyForm1 from "./Example/MyForm1";
+import Todo from "./Todos/Todo";
 
 // đây là funtion component cách khai báo truyền thống
 // function App() {
@@ -15,8 +21,22 @@ const App = () => {
         <img src={logo} className="App-logo" alt="logo" />
         {/* <MyComponent /> */}
         {/* <MyForm /> */}
-        <MyForm1 />
+        {/* <MyForm1 /> */}
+        <Todo />
       </header>
+
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </div>
   );
 };

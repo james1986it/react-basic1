@@ -3,12 +3,6 @@ import React from "react";
 import { toast } from 'react-toastify';
 
 class AddTodo extends React.Component {
-    constructor(props) {
-        super(props);
-        // Không gọi this.setState() ở đây!
-        this.state = this.props.itemTdoEdit;
-    }
-
     state = {
         id: '',
         title: ''

@@ -48,15 +48,6 @@ class Todo extends React.Component {
     // Hàm sửa 1 todo
     editTodo = (todo) => {
         console.log(">>> giá trị todo cần sửa: ", todo);
-        // set lại giá trị itemTodoEdit cần sửa
-        this.setState({
-            itemTdoEdit: {
-                id: todo.id,
-                title: todo.title
-            }
-        })
-
-        console.log(">>> giá trị state todo cần sửa: ", this.state.itemTdoEdit);
     }
 
     render() {

@@ -17,8 +17,7 @@ class ListTodo extends React.Component {
 
     // Hàm sửa 1 todo
     handleEditTodo = (event, todo) => {
-        // Thực hiện xóa
-        this.props.editTodo(todo);
+
     }
 
     render() {

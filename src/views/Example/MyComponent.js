@@ -13,6 +13,19 @@ class MyComponent extends React.Component {
     });
   };
 
+  // Hàm này chạy khi có dữ liệu update
+  // Sử dụng khi muốn so sánh dữ liệu hiện tại và tương lai hoặc quá khứ là thích hợp
+  // Hoặc muốn thay đổi dữ liệu của component con khi component cha thay đổi
+  componentDidUpdate(prevProps, prevState) {
+    console.log(">>> chạy conponents Did Update:", "prevProps: ", prevProps, "; prevState: ", prevState, "; this state: ", this.state);
+  }
+
+  // Hàm này chạy đầu tiên sau hàm render khi 1 class component được gọi
+  // Sử dụng để gọi api để lấy dữ liệu hiển thị
+  componentDidMount() {
+    console.log(">>> chạy conponents Did mount");
+  }
+
   /**
    *
    * @returns

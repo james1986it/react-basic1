@@ -3,6 +3,13 @@ import React from "react";
 import { toast } from 'react-toastify';
 
 class ListTodo extends React.Component {
+    state = {
+        editTodo: {
+            id: '',
+            title: ''
+        }
+    }
+
     // Hàm xóa 1 todo
     handleDeleteTodo = (event, todo) => {
         // Kiểm tra dữ liệu
@@ -17,12 +24,16 @@ class ListTodo extends React.Component {
 
     // Hàm sửa 1 todo
     handleEditTodo = (event, todo) => {
-
+        this.setState({
+            editTodo: todo
+        })
     }
 
     render() {
         // Lấy dữ liệu listTodo được truyền từ component cha là Todo sang theo dạng props
         let { listTodo } = this.props;
+        // Lấy editTodo
+        let { editTodo } = this.state;
         return (
             <>
                 <div className="list-todo-content">
@@ -31,7 +42,12 @@ class ListTodo extends React.Component {
                             return (
                                 <>
                                     <div key={item.id} className="todo-child">
-                                        <span>{index + 1} - {item.title}</span>
+                                        {editTodo.id !== '' || editTodo.id != item.id ?
+                                            <span>{index + 1} - {item.title}</span>
+                                            :
+                                            <span>{index + 1} - <input value={item.title} /></span>
+                                        }
+
                                         <button className="edit" onClick={(event, todo) => this.handleEditTodo(event, item)}>Edit</button>
                                         <button className="delete" onClick={(event, todo) => this.handleDeleteTodo(event, item)}>Delete</button>
                                     </div>

@@ -69,3 +69,8 @@
 
 20. Links & NavLinks Trong React.JS Routers phần 2
     => Dùng linh và NavLinks Trang hoạt động mượt mà và không có hiện tượng load lại trang
+
+21. Chuyển Trang - Redirect Với React.JS Routers
+    - Sử dụng withRouter của react-router-dom
+    Và sử dụng auto Redirect ở hàm componentDisMount
+    Lệnh Redirect: this.props.history.push("/todo"); => Xem ở component Home

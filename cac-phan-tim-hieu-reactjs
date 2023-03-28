@@ -58,10 +58,14 @@
     Sử dụng popup notify: https://www.npmjs.com/package/react-toastify
     Tổng hợp và áp dụng các kiến thức đã học ở trên để viết Todo App
 
-19. React Routers - Điều Hướng Trang Với React
+19. React Routers - Điều Hướng Trang Với React phần 1
     https://www.npmjs.com/package/react-router-dom
     https://github.com/remix-run/react-router
     https://reactrouter.com/en/main
     Cài react-router
         npm install --save-exact react-router-dom@5.3.0
 
+    => dùng ở phần này thì sau khi click vào các trang thì vẫn bị load lại trang
+
+20. Links & NavLinks Trong React.JS Routers phần 2
+    => Dùng linh và NavLinks Trang hoạt động mượt mà và không có hiện tượng load lại trang

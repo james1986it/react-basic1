@@ -13,6 +13,7 @@ import Nav from "./Nav/Nav";
 import Home from "./Example/Home";
 
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import ListUser from "./Users/ListUser";
 
 // đây là funtion component cách khai báo truyền thống
 // function App() {
@@ -36,6 +37,11 @@ const App = () => {
             {/* Nếu là vào todo app thì render ra component todo app */}
             <Route path="/todo">
               <Todo />
+            </Route>
+
+            {/* Nếu là vào ListUser thì render ra component ListUser */}
+            <Route path="/listuser">
+              <ListUser />
             </Route>
 
             {/* Nếu là vào contact thì render ra component contact */}

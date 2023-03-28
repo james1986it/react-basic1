@@ -83,3 +83,5 @@
     - Sử dung thư viện Axios để gọi api đến backend để lấy dữ liệu => có backend Demo https://reqres.in
     - Tài Liệu: https://www.npmjs.com/package/axios
     - npm install --save-exact axios@0.21.4
+
+24. Route parameters - Sử Dụng Tham Số Trên URL

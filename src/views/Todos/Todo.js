@@ -2,8 +2,6 @@ import React from "react";
 import "./ListTodo.scss"
 // thư viện hiển thị thông báo notify
 import { toast } from 'react-toastify';
-
-import AddTodo from "./AdTodo";
 import ListTodo from "./ListTodo";
 
 
@@ -18,16 +16,6 @@ class Todo extends React.Component {
             id: '',
             title: ''
         }
-    }
-
-    // Hàm tạo mới 1 todo
-    addNewTodo = (todo) => {
-        this.setState({
-            listTodo: [...this.state.listTodo, todo]
-        });
-
-        // Thông báo dạng popup notify
-        toast.success('Bạn đã thêm mới Todo thành công');
     }
 
     // Hàm xóa 1 todo
@@ -57,12 +45,6 @@ class Todo extends React.Component {
                 <p>This is Todo App</p>
                 <div>Đây là ứng dụng To Do App</div>
                 <div className="list-todo-container">
-
-                    <AddTodo
-                        addNewTodo={this.addNewTodo}
-                        itemTdoEdit={this.state.itemTdoEdit}
-                    />
-
                     <ListTodo listTodo={listTodo} deleteTodo={this.deleteTodo} editTodo={this.editTodo} />
                 </div>
             </>

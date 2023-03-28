@@ -1,8 +1,7 @@
 import logo from "./logo.svg";
 import "./App.scss";
-
 // thư viện hiển thị thông báo notify
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 // import MyComponent from "./Example/MyComponent";

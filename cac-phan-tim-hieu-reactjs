@@ -74,3 +74,7 @@
     - Sử dụng withRouter của react-router-dom
     Và sử dụng auto Redirect ở hàm componentDisMount
     Lệnh Redirect: this.props.history.push("/todo"); => Xem ở component Home
+
+22. HOC - Higher Order Components Với React.JS
+    Là hàm Dùng để thay đổi thuộc tính của 1 component
+    https://legacy.reactjs.org/docs/higher-order-components.html

@@ -1,13 +1,18 @@
 import logo from "./logo.svg";
 import "./App.scss";
 // thư viện hiển thị thông báo notify
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-// import MyComponent from "./Example/MyComponent";
+import MyComponent from "./Example/MyComponent";
 // import MyForm from "./Example/MyForm";
-// import MyForm1 from "./Example/MyForm1";
+import MyForm1 from "./Example/MyForm1";
 import Todo from "./Todos/Todo";
+
+import Nav from "./Nav/Nav";
+import Home from "./Example/Home";
+
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 // đây là funtion component cách khai báo truyền thống
 // function App() {
@@ -15,28 +20,55 @@ import Todo from "./Todos/Todo";
 const App = () => {
   // cú pháp JSX
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        {/* <MyComponent /> */}
-        {/* <MyForm /> */}
-        {/* <MyForm1 /> */}
-        <Todo />
-      </header>
+    <BrowserRouter>
+      <div className="App">
+        <header className="App-header">
+          <Nav />
+          <img src={logo} className="App-logo" alt="logo" />
 
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      />
-    </div>
+          {/* Swith navigation */}
+          <Switch>
+            {/* Nếu là vào home thì render ra component home */}
+            <Route path="/" exact>
+              <Home />
+            </Route>
+
+            {/* Nếu là vào todo app thì render ra component todo app */}
+            <Route path="/todo">
+              <Todo />
+            </Route>
+
+            {/* Nếu là vào contact thì render ra component contact */}
+            <Route path="/contact">
+              <MyForm1 />
+            </Route>
+
+            {/* Nếu là vào About thì render ra component About */}
+            <Route path="/about">
+              <MyComponent />
+            </Route>
+          </Switch>
+
+          {/* <MyComponent /> */}
+          {/* <MyForm /> */}
+          {/* <MyForm1 /> */}
+          {/* <Todo /> */}
+        </header>
+
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
+      </div>
+    </BrowserRouter>
   );
 };
 

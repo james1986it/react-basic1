@@ -106,5 +106,16 @@
     - Để kết nối và thông báo cho các component biết được dữ liệu thay đổi ntn
     - Dùng socket IO để nhận biết dữ liệu thay đổi => báo cho Redux biết dữ liệu thay đổi => Redux sẽ báo cho các component biết có dữ liệu thay đổi và component sẽ render lại dữ liệu
     
+28. Một vài khái niệm về Redux
+    - Store https://redux.js.org/tutorials/essentials/part-5-async-logic
+        Nơi lưu trữ giữ liệu 
+
+    - Actions https://redux.js.org/tutorials/essentials/part-1-overview-concepts
+        Tức là việc kết nối giữa thằng React và Redux
+
+    - Reducers (công nhân) https://redux.js.org/tutorials/essentials/part-5-async-logic
+        Là nơi xử lý các hành động
+
+
 
     

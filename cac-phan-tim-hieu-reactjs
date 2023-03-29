@@ -139,4 +139,5 @@
         Sau đó sẽ xử lý gọi và setup redux ở phía dưới hàm render của file index.js
 
 30. Mapping State của redux với props của react
-    
+    Ví dụ ở component views/ExRedux/ExRedux.js
+    Sử dụng hàm mapStateToProps để map

@@ -16,8 +16,7 @@ import Home from "./Example/Home";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import ListUser from "./Users/ListUser";
 import DetailUser from "./Users/DetailUser";
-
-
+import ExRedux from "./ExRedux/ExRedux";
 
 // đây là funtion component cách khai báo truyền thống
 // function App() {
@@ -51,6 +50,11 @@ const App = () => {
             {/* Nếu là vào DetailUser thì render ra component DetailUser */}
             <Route path="/listuser/:id">
               <DetailUser />
+            </Route>
+
+            {/* Nếu là vào contact thì render ra component contact */}
+            <Route path="/redux">
+              <ExRedux />
             </Route>
 
             {/* Nếu là vào contact thì render ra component contact */}

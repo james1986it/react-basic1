@@ -24,9 +24,20 @@ import ReactDOM from 'react-dom';
 import './styles/global.scss';
 import App from './views/App';
 
+// Import thư viện redux để sử dụng
+// Thư viện ép thằng react khởi động chạy song song cùng với redux
+import { Provider } from 'react-redux';
+import { createStore } from "redux";
+import rootReducer from "./store/reducers/rootReducer";
+
+// Định nghĩa store cho redux
+const reduxStore = createStore(rootReducer);
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* ép thằng react khởi động chạy song song cùng với redux và nạp store lưu trữ dữ liệu cho redux */}
+    <Provider store={reduxStore}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

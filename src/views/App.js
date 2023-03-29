@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.scss";
+
 // thư viện hiển thị thông báo notify
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -15,6 +16,7 @@ import Home from "./Example/Home";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import ListUser from "./Users/ListUser";
 import DetailUser from "./Users/DetailUser";
+
 
 
 // đây là funtion component cách khai báo truyền thống

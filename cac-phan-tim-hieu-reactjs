@@ -115,7 +115,27 @@
 
     - Reducers (công nhân) https://redux.js.org/tutorials/essentials/part-5-async-logic
         Là nơi xử lý các hành động
+29. Setup redux vào dự án 
+    https://www.npmjs.com/package/redux
+    https://www.npmjs.com/package/react-redux
 
+    Cài đặt
+        npm install --save-exact redux@4.1.1
+        npm install --save-exact react-redux@7.2.5
 
+    - Setup redux
+        Gọi và khởi tạo ngay ở file index.js đầu vào của project
+
+        // Import thư viện redux để sử dụng
+        import { Provider } from 'react-redux';
+        import { createStore } from "redux";
+        import rootReducer from './reducers';
+
+        => tạo 2 thư mục 
+            src/store/actions => chứa code liên quan đến các action của react gửi đến redux
+            src/store/reducers => chứa code liên quan đến redux
+        
+        Tạo 1 file src/store/reducers/rootReducer.js => và khai báo initState cho redux
+        Sau đó sẽ xử lý gọi và setup redux ở phía dưới hàm render của file index.js
 
     

@@ -88,3 +88,8 @@
     Viết ví dụ component DetailUser.js
     Sử dụng thư viện withRouter để lấy các tham số từ URL
 
+25. Route switch tags
+    Switch dùng làm gì?
+        - Dùng để chọn lọc và render theo component nếu vào đúng URL
+        - Nếu không dùng Switch thì nó sẽ render hết các componen theo router
+

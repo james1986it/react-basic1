@@ -141,3 +141,8 @@
 30. Mapping State của redux với props của react
     Ví dụ ở component views/ExRedux/ExRedux.js
     Sử dụng hàm mapStateToProps để map
+
+31. ÁP DỤNG REDUX ĐỂ THÊM/XÓA DỮ LIỆU REACT
+    Ví dụ ở component views/ExRedux/ExRedux.js
+    action Của redux được định dạng như sau: {type: 'abx/xyax', payload: dữ liệu cần truyền lên theo action Type}
+    Thực hiện action xoá và thêm mới user ngẫu hiên (action thực hiện ở file src/store/reducers/rootReducer.js)

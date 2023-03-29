@@ -2,62 +2,15 @@ import React from "react";
 import { connect } from "react-redux";
 
 class ExRedux extends React.Component {
-  // Khai báo biến state
-  state = {
-    firstName: "",
-    lastName: "",
-    arrJobs: [
-      { id: 1, title: "Title 1", salary: "500" },
-      { id: 2, title: "Title 2", salary: "300" },
-      { id: 3, title: "Title 3", salary: "200" },
-      { id: 4, title: "Title 4", salary: "900" },
-      { id: 5, title: "Title 5", salary: "700" },
-      { id: 6, title: "Title 6", salary: "100" },
-      { id: 7, title: "Title 7", salary: "1200" },
-      { id: 8, title: "Title 8", salary: "7200" },
-      { id: 9, title: "Title 9", salary: "4300" },
-      { id: 10, title: "Title 10", salary: "2300" },
-      { id: 11, title: "Title 11", salary: "4300" },
-      { id: 12, title: "Title 12", salary: "2100" },
-    ],
-  };
-
-  // add job mới khi submit form bên component con addComponent
-  addNewJob = (job) => {
-    console.log(">>> job: ", job);
-    // add thêm job vào arrJobs
-    this.setState({
-      arrJobs: [...this.state.arrJobs, job],
-    });
-
-    // Hoặc có thể viết như sau
-    /*
-      // lấy state hiện tại
-      let currentJob = this.state.arrJobs;
-      // đẩy dữ liệu vào job hiện tại
-      currentJob.push(job);
-      // set lại giá trị state
-      this.setState({
-        arrJobs: currentJob,
-        // arrJobs: [...this.state.arrJobs, job],
-      });
-    */
-  };
-
   // Hàm xoá job
-  removeJob = (jobItem, event) => {
-    console.log(">>> job cần xoá: ", jobItem);
-    console.log(">>> event: ", event);
+  handleDeleteUser = (user) => {
+    console.log(">>> user cần xoá: ", user);
+    // Thực hiện xoá dữ liệu user bằng hàm: deleteUserRedux => được định nghĩa trong hàm mapDispatchToProps ở bên dưới
+    this.props.deleteUserRedux(user);
+  };
 
-    // Lấy job hiện tại
-    let currentJob = this.state.arrJobs;
-    // Lấy ra tất cả các phần tư khác với phần tử cần xoá jobItem
-    currentJob = currentJob.filter((item) => item.id !== jobItem.id);
-
-    // Set lại giá trị jobs
-    this.setState({
-      arrJobs: currentJob,
-    });
+  handleCreateUser = (event) => {
+    this.props.AddUserRedux();
   };
 
   /**
@@ -70,9 +23,37 @@ class ExRedux extends React.Component {
   render() {
     // Log để biết biến state thay đổi
     console.log(">>> Check props: ", this.props);
+    let listUsers = this.props.dataRedux;
     return (
       <>
         <div>Ví dụ về cách sử dung Redux</div>
+        <div>
+          {listUsers &&
+            listUsers.length > 0 &&
+            listUsers.map((item, index) => {
+              return (
+                <>
+                  <div key={item.id}>
+                    {index + 1} - {item.name}{" "}
+                    <button
+                      type="button"
+                      onClick={() => this.handleDeleteUser(item)}
+                    >
+                      x
+                    </button>
+                  </div>
+                </>
+              );
+            })}
+          <div>
+            <button
+              type="button"
+              onClick={(event) => this.handleCreateUser(event)}
+            >
+              Add user
+            </button>
+          </div>
+        </div>
       </>
     );
   }
@@ -87,5 +68,16 @@ const mapStateToProps = (state) => {
   };
 };
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    // hàm xoá 1 user từ redux
+    deleteUserRedux: (userDelete) =>
+      dispatch({ type: "DELETE_USER", payload: userDelete }),
+
+    //   Hàm thực hiện thêm mới 1 user
+    AddUserRedux: () => dispatch({ type: "CREATE_USER" }),
+  };
+};
+
 // Nếu trong 1 file component chỉ viết có 1 component thì export compoent sẽ dùng lệch bên dưới
-export default connect(mapStateToProps)(ExRedux);
+export default connect(mapStateToProps, mapDispatchToProps)(ExRedux);

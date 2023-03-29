@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 import "./ListUser.scss";
+import { withRouter } from "react-router-dom";
+
 
 class ListUser extends React.Component {
   // biến state
@@ -26,6 +28,10 @@ class ListUser extends React.Component {
     });
   }
 
+  handleOnClickDetailUser = (user) => {
+    this.props.history.push(`/listuser/${user.id}`);
+  }
+
   // Hàm này khi gọi component sẽ đc thực hiện render đầu tiên (lần 1) sau đó nó sẽ gọi đến hàm componentDidMount
   render() {
     let { listusers } = this.state;
@@ -46,7 +52,7 @@ class ListUser extends React.Component {
               listusers.map((item, index) => {
                 return (
                   <>
-                    <tr key={item.id}>
+                    <tr key={item.id} onClick={() => this.handleOnClickDetailUser(item)}>
                       <td>{item.id}</td>
                       <td>{item.first_name}</td>
                       <td>{item.last_name}</td>
@@ -63,4 +69,4 @@ class ListUser extends React.Component {
   }
 }
 
-export default ListUser;
+export default withRouter(ListUser);

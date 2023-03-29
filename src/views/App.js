@@ -14,6 +14,8 @@ import Home from "./Example/Home";
 
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import ListUser from "./Users/ListUser";
+import DetailUser from "./Users/DetailUser";
+
 
 // đây là funtion component cách khai báo truyền thống
 // function App() {
@@ -40,8 +42,13 @@ const App = () => {
             </Route>
 
             {/* Nếu là vào ListUser thì render ra component ListUser */}
-            <Route path="/listuser">
+            <Route path="/listuser" exact>
               <ListUser />
+            </Route>
+
+            {/* Nếu là vào DetailUser thì render ra component DetailUser */}
+            <Route path="/listuser/:id">
+              <DetailUser />
             </Route>
 
             {/* Nếu là vào contact thì render ra component contact */}

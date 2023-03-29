@@ -73,7 +73,7 @@
 21. Chuyển Trang - Redirect Với React.JS Routers
     - Sử dụng withRouter của react-router-dom
     Và sử dụng auto Redirect ở hàm componentDisMount
-    Lệnh Redirect: this.props.history.push("/todo"); => Xem ở component Home
+    Lệnh Redirect chuyển trang: this.props.history.push("/todo"); => Xem ở component Home
 
 22. HOC - Higher Order Components Với React.JS
     Là hàm Dùng để thay đổi thuộc tính của 1 component
@@ -85,3 +85,6 @@
     - npm install --save-exact axios@0.21.4
 
 24. Route parameters - Sử Dụng Tham Số Trên URL
+    Viết ví dụ component DetailUser.js
+    Sử dụng thư viện withRouter để lấy các tham số từ URL
+

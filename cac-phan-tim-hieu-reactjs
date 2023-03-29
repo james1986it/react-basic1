@@ -93,3 +93,10 @@
         - Dùng để chọn lọc và render theo component nếu vào đúng URL
         - Nếu không dùng Switch thì nó sẽ render hết các componen theo router
 
+26. Import image
+    - Các sử dụng hình ảnh của react
+    - dùng lệnh: import anh from "./url ảnh";
+    - Nên sử dụng để tối ưu code
+    - Muốn đổi hình ảnh chỉ đổi 1 chỗ
+    - react nó sẽ tạo ra 1 url để dấu bảo mật đường dẫn thu mục ảnh
+    
